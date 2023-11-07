@@ -1,5 +1,5 @@
 <?php
-if (!$params['started']) {
+if (!isset($params['init_race']) and isset($params['finish_race'])) {
 ?>
 
     <form action="/race/start" method="post" class="col-10 col-md-7 col-lg-5 col-xl-4 mx-auto mt-4 border p-3 bg-light">
@@ -29,5 +29,6 @@ if (!$params['started']) {
 
 <?php
 }
-unset($params['started']);
+//nset($params['started']);
 ?>
+

@@ -6,6 +6,8 @@
             public function run(){
                 $_SESSION['runners'] = [];
                 $_SESSION['number'] = '1';
+               
+
                 $birthdate = new DateTime("1980-03-07");
                 $gender = "male";
                 $runner = array(
