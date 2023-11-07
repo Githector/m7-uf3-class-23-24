@@ -50,7 +50,9 @@
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
                 <th scope="col">Gender</th>
+                <th scope="col">Age</th>
                 <th scope="col">Category</th>
+                <th scope="col">Club</th>
             </tr>
         </thead>
         <tbody>
@@ -65,7 +67,9 @@
                 <td><?php echo $runner['name'] ?></td>
                 <td><?php echo $runner['surname'] ?></td>
                 <td><?php echo $runner['gender'] ?></td>
+                <td><?php echo $runner['age'] ?></td>
                 <td><?php echo $runner['category'] ?></td>
+                <td><?php echo $runner['club'] ?></td>
             </tr>
 
         <?php

@@ -30,7 +30,8 @@
                     "birthdate" => $birthdate,
                     "gender" => $gender,
                     "club" => $club,
-                    "category" => getCategory($birthdate, $gender)
+                    "age" => getEdat($birthdate),
+                    "category" => getCategory($birthdate, $gender),
                 );
                 $runnerModel->insert($runner);
                 $_SESSION['flash'] = "Runner created successfully";

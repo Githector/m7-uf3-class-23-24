@@ -1,9 +1,7 @@
 <?php
 function getCategory($bd,$g){
-    $now = new DateTime("now",new DateTimeZone("Europe/Madrid"));
-    $interval = $now->diff($bd);
-    $age = $interval->y;
-    if($g =="fe"){
+    $age = getEdat($bd);
+    if($g =="female"){
         if($age<19){
             return "1";
         }else if($age<65){
@@ -20,4 +18,11 @@ function getCategory($bd,$g){
             return "6";
         }
     }
+}
+
+function getEdat($bd){
+    $now = new DateTime("now",new DateTimeZone("Europe/Madrid"));
+    $interval = $now->diff($bd);
+    $age = $interval->y;
+    return $age;
 }

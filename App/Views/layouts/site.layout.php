@@ -22,9 +22,9 @@
       <div class="mt-2 right text-white h5 align-self-center">
 
         <a class="text-white text-decoration-none" href="">Runners | </a>
-        <a class="text-white text-decoration-none" href="">Races | </a>
+        <a class="text-white text-decoration-none" href="/race/index">Race | </a>
         <a class="text-white text-decoration-none" href="">Classification | </a>
-        <a class="text-white text-decoration-none" href="">Contact</a>
+        <a class="text-white text-decoration-none" href="/reset/run">Reset</a>
 
       </div>
     </nav>
