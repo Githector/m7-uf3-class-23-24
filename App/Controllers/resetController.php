@@ -4,7 +4,11 @@
     class resetController extends Controller{
             
             public function run(){
+                
+                $_SESSION = [];
                 $_SESSION['runners'] = [];
+                $_SESSION['races'] = [];
+                $_SESSION['arrivals'] = [];
                 $_SESSION['number'] = '1';
                
 

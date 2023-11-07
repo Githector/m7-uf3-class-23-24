@@ -12,6 +12,14 @@
            
         }
 
+
+        public function getRunnerByNumber($number){
+           foreach ($_SESSION['runners'] as $runner) {
+               if($runner['number'] == $number){
+                   return $runner;
+               }
+           }
+        }
     }
 
 ?>

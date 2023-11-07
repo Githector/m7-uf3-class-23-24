@@ -38,5 +38,9 @@ class Orm {
             }
         }
     }
+
+    public function truncate() {
+        $_SESSION[$this->model] = [];
+    }
 }
 ?>
