@@ -1,6 +1,7 @@
+<?php  ?>
+
 <!doctype html>
 <html lang="en">
-
 <head>
   <title>Title</title>
   <!-- Required meta tags -->
@@ -14,10 +15,22 @@
 
 <body>
   <header>
-    <!-- place navbar here -->
+    <nav class="p-2 h3 d-flex justify-content-between bg-secondary align-items-center">
+      <div class="left">
+        <i class="text-white">Running Cirviànum</i>
+      </div>
+      <div class="mt-2 right text-white h5 align-self-center">
+
+        <a class="text-white text-decoration-none" href="">Runners | </a>
+        <a class="text-white text-decoration-none" href="">Races | </a>
+        <a class="text-white text-decoration-none" href="">Classification | </a>
+        <a class="text-white text-decoration-none" href="">Contact</a>
+
+      </div>
+    </nav>
   </header>
   <main>
-    <?php echo $content ; ?>
+    <?php echo $content; ?>
   </main>
   <footer>
     <!-- place footer here -->

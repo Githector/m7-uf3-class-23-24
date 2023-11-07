@@ -1,6 +1,4 @@
-
 <?php
-
 class Orm {
 
     protected $model;
@@ -10,6 +8,7 @@ class Orm {
             $_SESSION[$model] = [];
         }
         $this->model = $model;
+        
     
         
     }
@@ -26,15 +25,6 @@ class Orm {
         }
     }
 
-    public function verify($token) {
-        foreach ($_SESSION[$this->model] as $key => $value) {
-            if ($value['token'] == $token) {
-                $_SESSION[$this->model][$key]['verified'] = true;
-                return $_SESSION[$this->model][$key];
-            }
-        }
-        return null;
-    }
 
     public function insert($data) {
         $_SESSION[$this->model][] = $data;
@@ -49,5 +39,4 @@ class Orm {
         }
     }
 }
-
 ?>
