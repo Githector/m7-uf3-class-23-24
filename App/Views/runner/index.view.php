@@ -3,15 +3,15 @@
     <h2 class="mt-2">New Runner</h2>
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+        <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="" value="<?php echo $params['post']['name'] ?? null ?>">
     </div>
     <div class="mb-3">
         <label for="surname" class="form-label">Surname</label>
-        <input type="text" class="form-control" name="surname" id="surname" aria-describedby="helpId" placeholder="">
+        <input type="text" class="form-control" name="surname" id="surname" aria-describedby="helpId" placeholder="" value="<?php echo $params['post']['surname'] ?? null ?>">
     </div>
     <div class="mb-3">
         <label for="birthdate" class="form-label">Birhdate</label>
-        <input type="date" class="form-control" name="birthdate" id="birthdate" aria-describedby="helpId" placeholder="">
+        <input type="date" class="form-control" name="birthdate" id="birthdate" aria-describedby="helpId" placeholder=""">
     </div>
     <div class="mb-3">
         <label for="gender" class="form-label">Gender</label>
@@ -23,15 +23,19 @@
     </div>
     <div class="mb-3">
         <label for="club" class="form-label">Club</label>
-        <input type="text" class="form-control" name="club" id="club" aria-describedby="helpId" placeholder="">
+        <input type="text" class="form-control" name="club" id="club" aria-describedby="helpId" placeholder="" value="<?php echo $params['post']['club'] ?? null ?>">
     </div>
 
     <button type="submit" class="btn btn-primary mb-2">Save</button>
     <button type="reset" class="btn btn-danger mb-2">Reset</button>
     <?php 
-    if(isset($params['flash'])){
-        echo "<div class='alert alert-success' role='alert'>".$params['flash']."</div>";
-        unset($params['flash']);
+    if(isset($params['flash']['ok'])){
+        echo "<div class='alert alert-success' role='alert'>".$params['flash']['ok']."</div>";
+        unset($params['flash']['ok']);
+    }
+    if(isset($params['flash']['ko'])){
+        echo "<div class='alert alert-danger' role='alert'>".$params['flash']['ko']."</div>";
+        unset($params['flash']['ko']);
     }
     ?>
     

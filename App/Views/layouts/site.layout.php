@@ -23,6 +23,7 @@
 
         <a class="text-white text-decoration-none" href="/runner/index">Runners | </a>
         <a class="text-white text-decoration-none" href="/race/index">Race | </a>
+        <a class="text-white text-decoration-none" href="/items/list">Items | </a>
         <a class="text-white text-decoration-none" href="/reset/run">Reset</a>
 
       </div>
