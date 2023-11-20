@@ -20,6 +20,13 @@
                }
            }
         }
+
+        public static function createRunnersTable(){
+            $db = new Database();
+            $connection = $db->getConnection();
+            $sql = "CREATE TABLE `running`.`runners` (`id_runner` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(100) NOT NULL , `surname` INT NOT NULL , `birthdate` DATETIME NOT NULL , `gender` VARCHAR(100) NOT NULL , `club` VARCHAR(100) NOT NULL , PRIMARY KEY (`id_runner`)) ENGINE = InnoDB;";
+            $db->queryDataBase($sql);
+        }
     }
 
 ?>

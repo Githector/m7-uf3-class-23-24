@@ -1,7 +1,7 @@
 <?php
 
 
-    class Race{
+    class Race extends Orm{
 
         public function __construct() {
             if(!isset($_SESSION['id_race'])){

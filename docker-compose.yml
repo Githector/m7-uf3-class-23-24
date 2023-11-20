@@ -8,4 +8,24 @@ services:
     - 80
   ports:
     - 80:80
-  command: ["bash", "-c", "a2enmod rewrite && apache2-foreground"]
+  command:
+    - sh
+    - -c
+    - docker-php-ext-install pdo_mysql \
+      && a2enmod rewrite \
+      && apache2-foreground
+ mysql:
+  image: mysql:latest
+  environment:
+   MYSQL_ROOT_PASSWORD: "123456"
+   MYSQL_DATABASE: "running"
+   MYSQL_USER: "hector"
+   MYSQL_PASSWORD: "123456"
+  ports:
+   - "9999:3306"
+ phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  environment:
+   PMA_HOST: mysql
+  ports:
+   - "8090:80"
