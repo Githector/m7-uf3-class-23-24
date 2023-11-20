@@ -3,9 +3,10 @@
 class Database
 {
     private $connection;
-    private $db_host = "localhost";
-    private $db_name = "running";
+    private $db_host = "mysql";
+    private $db_name = "ins";
     private $db_user = "hector";
+    private $password = "123456";
 
 
     public function __construct()
@@ -15,7 +16,7 @@ class Database
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ];
         
-        $this->connection = new PDO("mysql:host=$this->db_host;dbname=$this->db_name", $this->db_user, '', $options);
+        $this->connection = new PDO("mysql:host=$this->db_host;dbname=$this->db_name", $this->db_user, $this->password, $options);
 
         $this->connection->exec("SET CHARACTER SET UTF8");
     }

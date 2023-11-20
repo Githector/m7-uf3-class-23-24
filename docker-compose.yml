@@ -9,16 +9,14 @@ services:
   ports:
     - 80:80
   command:
-    - sh
+    - bash
     - -c
-    - docker-php-ext-install pdo_mysql \
-      && a2enmod rewrite \
-      && apache2-foreground
+    - docker-php-ext-install pdo_mysql && a2enmod rewrite && apache2-foreground
  mysql:
   image: mysql:latest
   environment:
    MYSQL_ROOT_PASSWORD: "123456"
-   MYSQL_DATABASE: "running"
+   MYSQL_DATABASE: "ins"
    MYSQL_USER: "hector"
    MYSQL_PASSWORD: "123456"
   ports:

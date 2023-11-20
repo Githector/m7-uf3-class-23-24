@@ -14,7 +14,16 @@ class Orm {
     }
 
     public function getAll() {
-        return $_SESSION[$this->model];
+        //return $_SESSION[$this->model];
+        $db = new Database();
+        $sql = "SELECT * FROM " . $this->model;
+        $params = [];
+        $result = $db->queryDataBase($sql, $params);
+        //echo "<pre>";
+        //print_r($result->fetchAll());
+        //echo "</pre>";
+        return $result->fetchAll();
+        //return null;
     }
 
     public function getById($id) {
@@ -26,11 +35,6 @@ class Orm {
     }
 
 
-    public function insert($data) {
-        $_SESSION[$this->model][] = $data;
-        return $data;
-    }
-
     public function updateById($data) {
         foreach ($_SESSION[$this->model] as $key => $value) {
             if ($value['id'] == $data['id']) {
@@ -39,8 +43,6 @@ class Orm {
         }
     }
 
-    public function truncate() {
-        $_SESSION[$this->model] = [];
-    }
+
 }
 ?>

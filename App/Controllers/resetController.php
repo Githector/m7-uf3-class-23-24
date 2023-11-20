@@ -1,13 +1,13 @@
 <?php 
 
-    include_once(__DIR__ . "/../Helpers/runner.php");
+    include_once( __DIR__ . "/../Models/Mp.php");
 
     class resetController extends Controller{
             
             public function run(){
 
                 
-                Runner::createRunnersTable();
+                Mp::createMpsTable();
                 
 
                 
@@ -132,7 +132,7 @@
 
 
 
-                header("Location: /runner/index");
+                header("Location: /mp/index");
             }
 
     }
