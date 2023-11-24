@@ -31,6 +31,7 @@
                             <th scope="col">Id (DB)</th>
                             <th scope="col">Number/th>
                             <th scope="col">Name</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,9 +41,14 @@
                         ?>
 
                             <tr>
-                                <td><?php echo $mp['mp_id'] ?></td>
+                                <td><?php echo $mp['id'] ?></td>
                                 <td><?php echo $mp['mp_number'] ?></td>
                                 <td><?php echo $mp['mp_name'] ?></td>
+                                <td>
+                                <a href="/mp/edit/<?php echo $mp['id'] ?>" class="btn btn-primary">Edit</a>
+                                <a href="/mp/destroy/<?php echo $mp['id'] ?>" class="btn btn-danger">Remove</a>
+                                <a href="/uf/index/<?php echo $mp['id'] ?>" class="btn btn-success">Add Uf</a>
+                            </td>
                             </tr>
 
                     <?php
